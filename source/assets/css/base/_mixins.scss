@@ -141,3 +141,25 @@
     @include arrow-position($size, $position);
   }
 }
+
+
+@mixin constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+
+.constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+  &.wider {
+    max-width: 1280px;
+  }
+  .full-width {
+    width: 100vw;
+    height: auto;
+  }
+}

@@ -1,0 +1,41 @@
+.split-buttons {
+  width: 100%;
+  @include box-sizing(border-box);
+  // padding:0.25em;
+  display: block;
+  border: none;
+  @include clearfix();
+}
+
+a.button {
+    width: 100%;
+    float:left;
+    display: block;
+    border: none;
+    text-align: center;
+    color: $white;
+    background-color: $blue;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    @include transition(150ms all linear);
+    @include box-sizing(border-box);
+    &:hover {
+      background-color: darken($blue, 4%);
+    }
+  }
+
+a.split-button {
+  width: 50%;
+  float:left;
+  display: inline-block;
+  text-align: center;
+  color: $white;
+  background-color: $blue;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  @include transition(150ms all linear);
+  @include box-sizing(border-box);
+  &:hover {
+    background-color: darken($blue, 4%);
+  }
+}

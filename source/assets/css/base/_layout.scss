@@ -15,25 +15,14 @@ html {
   }
 }
 
-@mixin constrain {
-  width: 80%;
-  max-width: 45em;
-  padding: 0 10%;
-  margin: 0 auto;
+.frame {
+  min-height: 100vh;
+  width: 100vw;
 }
 
-.constrain {
-  width: 80%;
-  max-width: 45em;
-  padding: 0 10%;
-  margin: 0 auto;
-  &.wider {
-    max-width: 1280px;
-  }
-  .full-width {
-    width: 100vw;
-    height: auto;
-  }
+#map {
+  height: 100vh;
+  width: 100vw;
 }
 
 .right {
@@ -42,6 +31,12 @@ html {
 
 .left {
   float: left;
+}
+
+.center {
+  display: block;
+  text-align: center;
+  width: 100%;
 }
 
 img {
