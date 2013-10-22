@@ -1,0 +1,126 @@
+//## Tooltips
+//
+//Use the tooltip class for pure CSS tooltips. No javascript needed. The following markup will produce an icon which when hovered over shows a tooltip:
+//
+//```html
+//<div class="tooltip">
+//  <span class="icon-help"></span>
+//  <div class="tooltip-wrapper">
+//    <p class="tooltip-content">Text to appear in the tooltip.</p>
+//  </div>
+//</div>
+//```
+//
+// Tooltips will show on hover. If you'd like to show a tooltip by default, just use the ```show-tooltip``` class. Tooltips appear below their items be default.
+//
+//.above        - places the tooltip above the icon
+//.before       - places tooltip to the left
+//.after        - places tooltip to the right
+//
+//Styleguide 4
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  .tooltip-wrapper {
+    position: absolute;
+  }
+  .tooltip-content {
+    @include p15;
+    @include box-sizing(border-box);
+    @include border-radius(3px);
+    @include adjust-font-size-to(13px);
+    white-space: nowrap;
+    background: $lighter-gray;
+    opacity: 0;
+    @include transition(150ms opacity linear);
+    position: relative;
+    text-align: center;
+    padding: 0.5em .75em;
+    margin: 0;
+    color: $darker-gray;
+    z-index: 99;
+    &:after {
+      @include arrow-base();
+    }
+  }
+  &:hover, &.show-tooltip {
+    .tooltip-content {
+      opacity: 1;
+    }
+  }
+
+  //&.above, &.below {
+    .tooltip-content {
+      left: -50%;
+    }
+    .tooltip-wrapper {
+      left: 50%;
+    }
+  //}
+
+  //&.below {
+    .tooltip-wrapper {
+      top: 115%;
+    }
+    .tooltip-content {
+      &:after {
+        @include arrow-position(5px, "above");
+        @include arrow-direction("up", 5px, $lighter-gray);
+      }
+    }
+  //}
+
+  &.above {
+    .tooltip-content {
+      &:after {
+        @include arrow-position(5px, "below");
+        @include arrow-direction("down", 5px, $lighter-gray);
+      }
+    }
+    .tooltip-wrapper {
+      bottom: 115%;
+      top: auto;
+    }
+  }
+
+  &.before, &.after {
+    float: none;
+    .tooltip-wrapper {
+      top: 50%;
+      left: auto;
+    }
+    .tooltip-content {
+      left: auto;
+    }
+    .tooltip-content {
+      margin-top: -1em;
+    }
+  }
+
+  &.before {
+    .tooltip-wrapper {
+      right: 135%;
+    }
+    .tooltip-content {
+      &:after {
+        @include arrow-position(5px, "right");
+        @include arrow-direction("left", 5px, $lighter-gray);
+      }
+    }
+  }
+
+  &.after {
+    .tooltip-wrapper {
+      left: 135%;
+    }
+    .tooltip-content {
+      &:after {
+        @include arrow-position(5px, "left");
+        @include arrow-direction("right", 5px, $lighter-gray);
+        left: 0;
+      }
+    }
+  }
+
+}

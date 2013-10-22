@@ -1,0 +1,82 @@
+// Baseline and Pica Measures
+$pica: 1rem;            // Pica is the same thins as a REM. Trying to make the term not phsycial on screens.
+$point: $pica/12;       // Pica also allows points - ties units to Base REM font size. Removes "pixel" which is a problematic thing on screen densities.
+$p: $point;             // Abbreviation.
+$baseline: 18*$point;   // Baseliine is set once, references to REM, and can be used as a structural layout unit. Used for vertical text padding and margin a lot.
+
+// Tonal Ratios For Stranded Scale Point Sizes
+$minor7th: 1/1.778;
+$minor3rd: 1/1.2;
+
+// Another tonal ratio for layout
+$fourth: 1/1.33;
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
+
+// Font Families
+@mixin Karla {font-family: "Open Sans", Arial, Helvetica, sans;}
+$body-font:      "Open Sans", Arial, Helvetica, sans !default;
+
+// PT Mono
+@import url(http://fonts.googleapis.com/css?family=PT+Mono);
+
+@mixin PTMono {font-family: 'PT Mono', sans-serif;};
+
+// PT Sans Narrow
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700);
+
+@mixin PTsans     {font-family:'PT Sans Narrow', sans-serif; font-style: normal; font-weight: 400; text-rendering: optimizeLegibility;}
+@mixin PTsansBold {font-family:'PT Sans Narrow', sans-serif; font-style: normal; font-weight: 700; text-rendering: optimizeLegibility;}
+
+// Open Sans
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+@mixin OpenLight {font-family:'Open Sans', sans-serif; font-style: normal; font-weight: 300; text-rendering: optimizeLegibility;}
+@mixin OpenLightItalic {font-family:'Open Sans', sans-serif; font-style: italic; font-weight: 300; text-rendering: optimizeLegibility;}
+
+@mixin Open {font-family:'Open Sans', sans-serif; font-style: normal; font-weight: 400; text-rendering: optimizeLegibility;}
+@mixin OpenItalic {font-family:'Open Sans', sans-serif; font-style: italic; font-weight: 400; text-rendering: optimizeLegibility;}
+
+@mixin OpenBold {font-family:'Open Sans', sans-serif; font-style: normal; font-weight: 700; text-rendering: optimizeLegibility;}
+@mixin OpenBoldItalic {font-family:'Open Sans', sans-serif; font-style: italic; font-weight: 700; text-rendering: optimizeLegibility;}
+
+@mixin Inconsalata {font-family: "Inconsolata", "Courier New", courier, monospace;}
+$button-font:    "Inconsolata", "Courier New", courier, monospace !default;
+
+// Point Sizes - Reference
+// Double Stranded Modular Scale
+
+// 45.000 = 2.813rem
+// 37.500 = 2.344rem
+// 31.250 = 1.953rem
+// 26.042 = 1.628rem
+// 21.702 = 1.356rem
+// 18.000 = 1.125rem
+// 15.000 = 0.938rem
+// 12.500 = 0.781rem
+
+
+@mixin p45{
+  font-size: 2.813rem;
+  line-height: 2*$baseline; }
+@mixin p37{
+  font-size: 2.344rem;
+  line-height: 2*$baseline; }
+@mixin p31{
+  font-size: 1.953rem;
+  line-height: 2*$baseline; }
+@mixin p26{
+  font-size: 1.628rem;
+  line-height: 2*$baseline; }
+@mixin p21{
+  font-size: 1.356rem;
+  line-height: 2*$baseline; }
+@mixin p18{
+  font-size: 1.125rem;
+  line-height: 1*$baseline; }
+@mixin p15{
+  font-size: 0.938rem;
+  line-height: 1*$baseline; }
+@mixin p12{
+  font-size: 0.781rem;
+  line-height: 1*$baseline; }

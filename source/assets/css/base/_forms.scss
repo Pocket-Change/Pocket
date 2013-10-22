@@ -1,0 +1,56 @@
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  vertical-align: baseline;
+  line-height: normal;
+}
+
+input[type="search"] {
+  -webkit-appearance: textfield;
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+input, select, textarea {
+  @include box-sizing(border-box);
+  display: block;
+  width: 100%;
+  outline: none;
+  outline-offset: 0;
+}
+
+input[type='search'],
+input[type='text'],
+textarea{
+  @include transition(all 100ms linear);
+  @include border-radius(0);
+  font-size: 1em;
+  font-family: $body-font;
+  border: none;
+  display: inline-block;
+  margin: 0;
+  outline: none;
+  outline-offset: 0;
+  padding: 0.5em;
+  background-color: $white;
+  color: $dark-gray;
+  &:focus {
+    color: $blue;
+  }
+}
+
+::-webkit-input-placeholder {color: $light-gray;}
+     :-ms-input-placeholder {color: $light-gray;}
+         ::-moz-placeholder {color: $light-gray;}
+          :-moz-placeholder {color: $light-gray;}

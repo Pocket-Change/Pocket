@@ -1,0 +1,49 @@
+html {
+  background-color: $dark-gray;
+}
+
+// Reusable Layout Classes
+.panel {
+  width: 100%;
+  padding: 2em 0;
+  &.off-white {
+    background-color: $off-white;
+  }
+  &.cyan {
+    background-color: $cyan;
+    color: $white;
+  }
+}
+
+@mixin constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+}
+
+.constrain {
+  width: 80%;
+  max-width: 45em;
+  padding: 0 10%;
+  margin: 0 auto;
+  &.wider {
+    max-width: 1280px;
+  }
+  .full-width {
+    width: 100vw;
+    height: auto;
+  }
+}
+
+.right {
+  float: right;
+}
+
+.left {
+  float: left;
+}
+
+img {
+  max-width: 100%;
+}

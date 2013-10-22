@@ -1,0 +1,143 @@
+@mixin retina-display {
+  @media screen and (-webkit-min-device-pixel-ratio : 1.5), screen and (min-device-pixel-ratio : 1.5) {
+    @content;
+  }
+}
+
+@mixin respond-to($min-width, $max-width) {
+  @media only screen and (min-width : $min-width) and (max-width : $max-width) {
+    @content;
+  }
+}
+
+@mixin full {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.full {
+  @include full;
+}
+
+@mixin clearfix(){
+  &:before,
+  &:after {
+    content:"";
+    display:table;
+  }
+  &:after {
+    clear:both;
+  }
+}
+
+.clearfix {
+  @include clearfix();
+}
+
+@mixin size($width, $height) {
+  height: $height;
+  width: $width;
+}
+
+@mixin square($size) {
+  @include size($size, $size);
+}
+
+@mixin position($type, $top:auto, $left:auto, $bottom:auto, $right:auto) {
+  position: $type;
+  top: $top;
+  left: $left;
+  bottom: $bottom;
+  right: $right;
+}
+
+@mixin arrow-base(){
+  @include square(0);
+  content: "";
+  display: block;
+}
+
+@mixin arrow-direction($direction, $size, $color) {
+  @if $direction == "up" {
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: none;
+    border-bottom: $size solid $color;
+  }
+  @if $direction == "down" {
+    border-bottom: none;
+    border-left: $size solid transparent;
+    border-right: $size solid transparent;
+    border-top: $size solid $color;
+  }
+  @if $direction == "left" {
+    border-right:none;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+  }
+  @if $direction == "right" {
+    border-left: none;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-right: $size solid $color;
+  }
+}
+
+@mixin arrow-position($size:6px, $position: false) {
+  position: absolute;
+  @if $position == "above" {
+    left: 50%;
+    top: -($size);
+    right: auto;
+    bottom: auto;
+    margin-left: -($size);
+  }
+  @if $position == "top" {
+    left: 50%;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    margin-left: -($size);
+  }
+  @if $position == "left" {
+    left: -($size);
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    margin-top: -($size);
+  }
+  @if $position == "below" {
+    bottom: -($size);
+    left: 50%;
+    top: auto;
+    right: auto;
+    margin-left: -($size);
+  }
+  @if $position == "bottom" {
+    left: 50%;
+    bottom: 0;
+    right: auto;
+    top: auto;
+    margin-left: -($size);
+  }
+  @if $position == "right" {
+    right: -($size);
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    margin-top: -($size);
+  }
+}
+
+@mixin arrow($direction: "down", $size: 6px, $color: red, $position: false) {
+  position: relative;
+  &:after {
+    @include arrow-base();
+    @include arrow-direction($direction, $size, $color);
+    @include arrow-position($size, $position);
+  }
+}

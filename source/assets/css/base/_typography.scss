@@ -1,0 +1,72 @@
+
+
+// Basic Type Styles
+
+// Headers
+h1, h2, h3, h4, h5, h6 { @include OpenLight; text-align: center;}
+
+h1 { @include p37; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+h2 { @include p31; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+h3 { @include p26; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+h4 { @include p21; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+h5 { @include p18; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+h6 { @include p15; margin-top: 1*$baseline; margin-bottom:0.5*$baseline; }
+
+// Body
+body {
+  @include Karla;
+}
+
+p {
+  @include p15;
+  margin-bottom: 1*$baseline;
+};
+
+a {
+  text-decoration: none;
+  color: $green;
+}
+
+ul {
+  li {
+    list-style-type: none;
+    margin: 1.5em 0;
+    line-height: 1*$baseline;
+  }
+}
+
+// spot color classes
+h1, h2, h3, h4, h5, h6, a {
+  color: $off-white;
+  &.green {
+    color: $green;
+  }
+  &.yellow {
+    color: $yellow;
+  }
+  &.orange {
+    color: $orange;
+  }
+  &.red {
+    color: $red;
+  }
+  &.magenta {
+    color: $magenta;
+  }
+  &.violet {
+    color: $violet;
+  }
+  &.blue {
+    color: $blue;
+  }
+  &.cyan {
+    color: $cyan;
+  }
+  &.green {
+    color: $green;
+  }
+}
+
+.light {
+  font-weight: 300;
+}

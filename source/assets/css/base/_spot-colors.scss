@@ -1,0 +1,87 @@
+@mixin spot-color($color) {
+  h1, h2, h3, h4, h5, h6, a {
+    color: $color;
+  }
+  &#header {
+    background-color: $color;
+  }
+  &.title a {
+    border-left: 3px solid $color;
+  }
+  &.description {
+    a {
+      color: $color;
+    }
+  }
+  .author {
+    a {
+      color: $color;
+    }
+  }
+  &.node {
+    &:hover {
+      &:after {
+        background-color: $color;
+      }
+    }
+  }
+
+  &.project-team {
+    background-color: $color;
+  }
+  .split-button {
+    background-color: $color;
+    &:hover {
+      background-color: darken($color, 5%);
+    }
+    &:first-child {
+      background-color: lighten($color, 10%);
+      // color: $light-gray;
+      &:hover {
+        background-color: lighten($color, 5%);
+      }
+    }
+  }
+  .small-title {
+    border-left: 3px solid $color;
+  }
+}
+.darker-blue {
+  @include spot-color($darker-blue);
+}
+.dark-blue {
+  @include spot-color($dark-blue);
+}
+.blue {
+  @include spot-color($blue);
+}
+.light-blue {
+  @include spot-color($light-blue);
+}
+.orange {
+  @include spot-color($orange);
+}
+.yellow {
+  @include spot-color($yellow);
+}
+.light-green {
+  @include spot-color($light-green);
+}
+.green {
+  @include spot-color($green);
+}
+.cyan {
+  @include spot-color($cyan);
+}
+.lighter-red {
+  @include spot-color($lighter-red);
+}
+.light-red {
+  @include spot-color($light-red);
+}
+.red {
+  @include spot-color($red);
+}
+.dark-red {
+  @include spot-color($dark-red);
+}
