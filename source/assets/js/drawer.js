@@ -17,7 +17,7 @@ var drawerHandler = (function() {
         drawer      = document.getElementById('drawer'),
         touchEvent  = isMobile() ? 'touchstart' : 'click',
         buttons     = Array.prototype.slice.call(document.querySelectorAll('.toggle')),
-        close       = document.getElementById('close-drawer'),
+        // close       = document.getElementById('close-drawer'),
         content     = document.getElementById('main-content');
 
 
@@ -37,7 +37,7 @@ var drawerHandler = (function() {
     var bodyClick = function(e){
       closeDrawer();
       content.removeEventListener( touchEvent, bodyClick );
-      close.removeEventListener( touchEvent, bodyClick );
+      // close.removeEventListener( touchEvent, bodyClick );
     };
 
     buttons.forEach(function(el){
@@ -49,7 +49,7 @@ var drawerHandler = (function() {
         e.preventDefault();
         openDrawer(direction);
         content.addEventListener(touchEvent, bodyClick);
-        close.addEventListener(touchEvent, bodyClick);
+        // close.addEventListener(touchEvent, bodyClick);
       });
 
     });
