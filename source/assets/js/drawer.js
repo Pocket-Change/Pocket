@@ -25,6 +25,7 @@ var drawerHandler = (function() {
       classie.remove(drawer, 'active-left');
       classie.remove(drawer, 'active-right');
       classie.remove(drawer, 'active-top');
+      classie.remove(drawer, 'active-bottom');
       classie.remove(body, 'drawer-open');
     };
 
