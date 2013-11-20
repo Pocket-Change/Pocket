@@ -12,9 +12,9 @@
 
 
   <%= stylesheet_link_tag "all" %>
-  <%= stylesheet_link_tag "leaflet" %>
 
   <%= javascript_include_tag "jquery-1.9.1.min.js" %>
+  <%= javascript_include_tag "modernizr.custom.js" %>
   <%= javascript_include_tag "all" %>
 
   <!--[if lt IE 9]>
@@ -22,7 +22,19 @@
   <![endif]-->
 
 <head>
-<body>
-  <%= yield %>
+<body id="wrap">
+  <div class="drawer" id="drawer">
+    <nav class="drawer-nav drawer-top other">
+      <h2>other</h2>
+    </nav>
+    <nav class="drawer-nav drawer-bottom self">
+      <h2>self</h2>
+    </nav>
+  </div>
+  <div class="main-content" id="main-content">
+    <%= yield %>
+  </div>
 </body>
+  <%= javascript_include_tag "classie" %>
+  <%= javascript_include_tag "drawer" %>
 </html>
