@@ -3,17 +3,14 @@
 @import "config";
 @import "base/reset";
 @import "base/mixins";
-@import "base/spot-colors";
 @import "base/typecabinet";
 @import "base/tooltips";
 @import "base/grid";
 @import "base/typography";
 @import "base/buttons";
-@import "base/code";
-@import "base/project-icons";
 @import "base/layout";
-@import "base/map";
+
 
 // Pages
-@import "Pages/opening_view";
+@import "pages/main";
 
