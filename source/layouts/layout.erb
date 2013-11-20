@@ -16,8 +16,6 @@
 
   <%= javascript_include_tag "jquery-1.9.1.min.js" %>
   <%= javascript_include_tag "all" %>
-  <%= javascript_include_tag "leaflet" %>
-  <%= javascript_include_tag "esri-leaflet" %>
 
   <!--[if lt IE 9]>
     <%= javascript_include_tag "html5shiv.js" %>
@@ -26,11 +24,5 @@
 <head>
 <body>
   <%= yield %>
-
-  <script>
-  var map = L.map("map");
-  map.setView([45.5275, -122.6717], 15);
-  L.esri.basemapLayer("Topographic").addTo(map);
-  </script>
 </body>
 </html>
