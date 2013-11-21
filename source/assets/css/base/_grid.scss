@@ -1,38 +1,38 @@
-body {
-  @include respond-to(0px, 700px) {
-    .col1of1   { float: none; }
-    .col1of2   { width: 100%; }
-    .col1of3   { width: 100%; }
-    .col2of3   { width: 100%; }
-    .col1of4   { width: 100%; }
-    .col3of4   { width: 100%; }
-    .col1of5   { width: 100%; }
-    .col2of5   { width: 100%; }
-    .col3of5   { width: 100%; }
-    .col4of5   { width: 100%; }
-    .col1of6   { width: 100%; }
-    .col5of6   { width: 100%; }
-    .col1of12  { width: 100%; }
-    .col5of12  { width: 100%; }
-    .col7of12  { width: 100%; }
-    .col11of12 { width: 100%; }
-    .pre1of2   { margin-left: 0; }
-    .pre1of3   { margin-left: 0; }
-    .pre2of3   { margin-left: 0; }
-    .pre1of4   { margin-left: 0; }
-    .pre3of4   { margin-left: 0; }
-    .pre1of5   { margin-left: 0; }
-    .pre2of5   { margin-left: 0; }
-    .pre3of5   { margin-left: 0; }
-    .pre4of5   { margin-left: 0; }
-    .pre1of6   { margin-left: 0; }
-    .pre5of6   { margin-left: 0; }
-    .pre1of12  { margin-left: 0; }
-    .pre5of12  { margin-left: 0; }
-    .pre7of12  { margin-left: 0; }
-    .pre11of12 { margin-left: 0; }
-  }
-}
+// body {
+//   @include respond-to(0px, 700px) {
+//     .col1of1   { float: none; }
+//     .col1of2   { width: 100%; }
+//     .col1of3   { width: 100%; }
+//     .col2of3   { width: 100%; }
+//     .col1of4   { width: 100%; }
+//     .col3of4   { width: 100%; }
+//     .col1of5   { width: 100%; }
+//     .col2of5   { width: 100%; }
+//     .col3of5   { width: 100%; }
+//     .col4of5   { width: 100%; }
+//     .col1of6   { width: 100%; }
+//     .col5of6   { width: 100%; }
+//     .col1of12  { width: 100%; }
+//     .col5of12  { width: 100%; }
+//     .col7of12  { width: 100%; }
+//     .col11of12 { width: 100%; }
+//     .pre1of2   { margin-left: 0; }
+//     .pre1of3   { margin-left: 0; }
+//     .pre2of3   { margin-left: 0; }
+//     .pre1of4   { margin-left: 0; }
+//     .pre3of4   { margin-left: 0; }
+//     .pre1of5   { margin-left: 0; }
+//     .pre2of5   { margin-left: 0; }
+//     .pre3of5   { margin-left: 0; }
+//     .pre4of5   { margin-left: 0; }
+//     .pre1of6   { margin-left: 0; }
+//     .pre5of6   { margin-left: 0; }
+//     .pre1of12  { margin-left: 0; }
+//     .pre5of12  { margin-left: 0; }
+//     .pre7of12  { margin-left: 0; }
+//     .pre11of12 { margin-left: 0; }
+//   }
+// }
 
 // Mini Inline-Block Grid
 .col {

@@ -37,7 +37,9 @@ Pocket.subtract = function(val) {
 // UNDO/REDO
 Pocket.undo = function() {
   val = p.current+p.last;
-  current.set(val);
+  if (undid === false) {
+    current.set(val);
+  }
   undid = true;
 };
 
@@ -50,6 +52,4 @@ Pocket.redo = function() {
     console.log('Nothing to Undo.');
   }
 };
-
-// ERROR
 
