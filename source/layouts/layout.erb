@@ -28,21 +28,14 @@
 <body id="wrap">
   <div class="drawer" id="drawer">
     <nav class="drawer-nav drawer-top other">
-      <h2>other</h2>
+      <div class="keyboard" id="resetter">
+        <%= partial "partials/keyboard" %>
+      </div>
     </nav>
+
     <nav class="drawer-nav drawer-bottom self">
-      <div class="keys">
-        <span class="1">1</span>
-        <span class="2">2</span>
-        <span class="3">3</span>
-        <span class="4">4</span>
-        <span class="5">5</span>
-        <span class="6">6</span>
-        <span class="7">7</span>
-        <span class="8">8</span>
-        <span class="9">9</span>
-        <span class="0">0</span>
-        <span class="Dot">.</span>
+      <div class="keyboard" id="subtracter">
+        <%= partial "partials/keyboard" %>
       </div>
     </nav>
   </div>
@@ -52,5 +45,6 @@
 </body>
   <%= javascript_include_tag "classie" %>
   <%= javascript_include_tag "drawer" %>
-  <%= javascript_include_tag "all" %>
+  <%= javascript_include_tag "firebase" %>
+  <%= javascript_include_tag "keyboard" %>
 </html>
