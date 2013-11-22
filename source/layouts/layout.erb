@@ -1,29 +1,17 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="ie lt-ie9 lt-ie8 lt-ie7 ie6"> <![endif]-->
-<!--[if IE 7]>         <html class="ie lt-ie9 lt-ie8 ie7"> <![endif]-->
-<!--[if IE 8]>         <html class="ie lt-ie9 ie8"> <![endif]-->
-<!--[if IE 9]>         <html class="ie ie9"> <![endif]-->
-<!--[if !IE]><!--> <html> <!--<![endif]-->
+<html>
 <head>
   <meta charset="UTF-8">
   <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
   <meta name="viewport" content="width=device-width, user-scalable=false;">
-  <title><%= data.page.title ? data.page.title + " - Esri PDX" : "Esri PDX" %></title>
+  <title>Pocket</title>
   <script src='https://cdn.firebase.com/v0/firebase.js'></script>
 
   <%= stylesheet_link_tag "all" %>
-
   <%= javascript_include_tag "jquery-1.9.1.min.js" %>
   <%= javascript_include_tag "modernizr.custom.js" %>
   <%= javascript_include_tag "jquery.hammer.min" %>
-
-
-
-
-  <!--[if lt IE 9]>
-    <%= javascript_include_tag "html5shiv.js" %>
-  <![endif]-->
-
+  <%= javascript_include_tag "chroma.min.js" %>
 <head>
 <body id="wrap">
   <div class="drawer" id="drawer">
@@ -47,4 +35,5 @@
   <%= javascript_include_tag "drawer" %>
   <%= javascript_include_tag "firebase" %>
   <%= javascript_include_tag "keyboard" %>
+  <%= javascript_include_tag "touchevents" %>
 </html>
