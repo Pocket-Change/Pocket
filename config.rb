@@ -1,8 +1,8 @@
 # Assets directories
-set :css_dir, 'assets/css'
-set :fonts_dir, 'assets/fonts'
-set :images_dir, 'assets/img'
-set :js_dir, 'assets/js'
+set :css_dir, 'Pocket/assets/css'
+set :fonts_dir, 'Pocket/assets/fonts'
+set :images_dir, 'Pocket/assets/img'
+set :js_dir, 'Pocket/assets/js'
 
 set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
