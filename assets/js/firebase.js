@@ -64,4 +64,6 @@ Pocket = {
   }
 };
 
-Pocket.init();
+$( document ).ready(function() {
+  Pocket.init();
+});

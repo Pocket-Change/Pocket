@@ -37,6 +37,8 @@ Pocket.keyboard = function(which){
   });
 };
 
-Pocket.keyboard("resetter");
-Pocket.keyboard("subtracter");
+$( document ).ready(function() {
+  Pocket.keyboard("resetter");
+  Pocket.keyboard("subtracter");
+});
 
