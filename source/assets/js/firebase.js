@@ -8,14 +8,15 @@ var count = document.getElementById('pocket-value');
 var p = {};
 var undid = false;
 
-var current = ref.child('current'),
-    last    = ref.child('last'),
-    start   = ref.child('start');
-
+var current  = ref.child('current'),
+    last     = ref.child('last'),
+    start    = ref.child('start'),
+    oldStart = $('#resetter .output')[0];
 
 ref.on('value', function(snapshot) {
   p = snapshot.val();
   count.innerHTML = p.current;
+  oldStart.innerHTML = p.start;
 });
 
 // SET
